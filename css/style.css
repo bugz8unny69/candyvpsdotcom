@@ -684,6 +684,119 @@ button.main_bt a:hover {
     visibility: hidden;
 }
 
+/* Container for the cards */
+.modern-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
 
+/* Individual card styles */
+.modern-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Adjust width as needed */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
+.modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
+/* Card header styles */
+.modern-card-header {
+    background-color: #1bd980;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.modern-card-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.modern-card-price, .modern-card-duration {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Card body styles */
+.modern-card-body {
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.modern-card-features-title {
+    font-size: 1.3em;
+    color: #21a46b;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Features list */
+.modern-card-features-list, .modern-card-additional-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modern-card-feature-item, .modern-card-additional-feature-item {
+    font-size: 1em;
+    color: #333333;
+    margin: 5px 0;
+}
+
+.modern-card-note {
+    font-size: 0.9em;
+    color: #666666;
+    margin-top: 10px;
+}
+
+/* Buy Now button */
+.modern-card-buy-now {
+    background-color: #0cc48d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 20px; /* Increased height */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: auto; /* Affix to the bottom */
+}
+
+.modern-card-buy-now:hover {
+    background-color: #004d40;
+}
+.modern-card-buy-now {
+    padding: 20px 20px; /* Adjust padding to make button taller */
+}
+  
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    .modern-card {
+      flex: 1 1 calc(24.333% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modern-card {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modern-card {
+      flex: 1 1 100%;
+    }
+  }
