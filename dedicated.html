@@ -88,8 +88,8 @@
 							 reliability, we have the perfect plan for you. Choose from our range of dedicated hosting options 
 							 and empower your business with the resources it needs to thrive. Elevate your online presence with 
 							 CandyVPS dedicated hosting.</p>
-                         <a class="get_bg" href="#" role="button">Get Started</a>
-                         <a class="btn btn-lg btn-dark" href="about.html" role="button">Contact Us</a>
+                         <a class="get_bg" href="https://cust.iocloudsolutions.net/order.php?step=1&productGroup=6" role="button">Get Started</a>
+                         <a class="btn btn-lg btn-dark" href="#contactus" role="button">Contact Us</a>
                     </div>
                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                  <div class="img-box">
@@ -97,16 +97,18 @@
                  </div>
             </div>
            </div>
-           <div class="emaim-bt invisible">
-        		<div class="col-md-9 margin-0">
+           <div class="invisible">
+           <div class="emaim-bt">
+           		<div class="col-md-9 margin-0">
             		<div class="input-group mb-3 margin-top-20">
                 		<input type="text" class="form-control" placeholder="Enter domain name here">
-            			<div class="input-group-append">
-                	<button class="search_bt" type="Subscribe"><a href="#">Search</a></button>  
-           				</div>
+           					 <div class="input-group-append">
+                				<button class="search_bt" type="Subscribe"><a href="#">Search</a></button>  
+            				 </div>
             		</div>           
         		</div>
        		</div>
+			</div>
      	</div>
     	</div>
     </section>
@@ -130,7 +132,7 @@
 			<div class="modern-card">
 				<div class="modern-card-header">
 					<h2 class="modern-card-title">Atom 2c</h2>
-					<p class="modern-card-price">$7.50</p>
+					<p class="modern-card-price">$45.00</p>
 					<p class="modern-card-duration">Every Month</p>
 				</div>
 				<div class="modern-card-body">
@@ -150,7 +152,7 @@
 			<div class="modern-card">
 				<div class="modern-card-header">
 					<h2 class="modern-card-title">Xeon D</h2>
-					<p class="modern-card-price">$13.50</p>
+					<p class="modern-card-price">$110.00</p>
 					<p class="modern-card-duration">Every Month</p>
 				</div>
 				<div class="modern-card-body">
@@ -170,7 +172,7 @@
 			<div class="modern-card">
 				<div class="modern-card-header">
 					<h2 class="modern-card-title">Xeon Scalable 10c</h2>
-					<p class="modern-card-price">$25.50</p>
+					<p class="modern-card-price">$180.00</p>
 					<p class="modern-card-duration">Every Month</p>
 				</div>
 				<div class="modern-card-body">
@@ -189,17 +191,17 @@
 			
 			<div class="modern-card">
 				<div class="modern-card-header">
-					<h2 class="modern-card-title">Business Pro</h2>
-					<p class="modern-card-price">$49.50</p>
+					<h2 class="modern-card-title">Xeon Scalable 16c</h2>
+					<p class="modern-card-price">$210.00</p>
 					<p class="modern-card-duration">Every Month</p>
 				</div>
 				<div class="modern-card-body">
 					<h3 class="modern-card-features-title">Top Features</h3>
 					<ul class="modern-card-features-list">
-						<li class="modern-card-feature-item">CPU: 4</li>
-						<li class="modern-card-feature-item">Monthly Traffic: 5 TB</li>
-						<li class="modern-card-feature-item">Disk Space: 160 GB</li>
-						<li class="modern-card-feature-item">Dedicated RAM: 8 GB</li>
+						<li class="modern-card-feature-item">CPU: Xeon 6130/similar 2.1 GHz (16 Cores)</li>
+						<li class="modern-card-feature-item">Dedicated RAM: 64 GB DDR4 ECC REG RAM</li>
+						<li class="modern-card-feature-item">Disk Space: 2 X 480 GB nvme</li>
+						<li class="modern-card-feature-item">Monthly Traffic: 15 TB</li>
 						<li class="modern-card-feature-item">IP Addresses: 1</li>
 					</ul>
 					<p class="modern-card-note">The package(s) will be activated within 24 hours, typically within 2 hours.</p>
@@ -271,27 +273,32 @@
     		<div class="row">
     			<div class="col-md-6">
     				<div class="input_main">
+    						<form method="POST" action="formmail/formmail.php" onsubmit="return validateForm()">
                        <div class="container">
-                          <form action="/action_page.php">
+                       		<div class="form-group">
+										<a name="contactus"></a>
+    								</div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="Name">
+                              <input type="text" class="email-bt" placeholder="Name" id="name" name="Name">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Email" name="Email">
+                              <input type="text" class="email-bt" placeholder="Email" id="email" name="Email">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone" name="Email">
+                              <input type="text" class="email-bt" placeholder="Phone" id="phone" name="Phone">
                             </div>
                                 <div class="form-group">
-                                  <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
+                                  <textarea class="massage-bt" placeholder="Message" rows="5" id="message" name="Message"></textarea>
                                 </div>
-                            </form>
-                          
-                       </div> 
-                       <div class="send_btn">
-                        <button type="button" class="main_bt"><a href="#">Send</a></button>
-                       </div>                   
-                    </div>
+                            <input type="hidden" name="good_url" value="https://candyvps.com/?message_sent=true#contactus" />
+                            <input type="hidden" name="bad_url" value="https://candyvps.com/?message_sent=false#contactus" />
+                       	</div> 
+                       	<div class="send_btn">
+                        	<button class="main_bt" type="submit">Send</button>
+                       	</div>
+                       	<div id="errorMessages" class="error"></div>
+                    	</form>
+               </div>
     			</div>
     			<div class="col-md-6">
     				<div class="section_right">
@@ -361,8 +368,8 @@
     				<div class="col-sm-12">
     					<div class="menu_text">
     						<ul>
-    						   <li><a href="#"><img src="images/fb-icon.png"></a></li>
-    						   <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+    						   <li><a href="https://www.facebook.com/people/Candy-VPS/61555694461784/"><img src="images/fb-icon.png"></a></li>
+    						   <li><a href="https://x.com/candy_vps"><img src="images/twitter-icon.png"></a></li>
     						   <li><a href="#"><img src="images/in-icon.png"></a></li>
     						   <li><a href="#"><img src="images/google-icon.png"></a></li>
     					    </ul>
@@ -394,6 +401,7 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="js/form_validation.js"></script>
       <script>
          $(document).ready(function(){
          $(".fancybox").fancybox({

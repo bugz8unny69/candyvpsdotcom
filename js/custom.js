@@ -370,3 +370,83 @@ $(function () {
 
 
 });
+
+/* Form validation function
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+function validateForm() {
+  // Get the values from the form fields
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var message = document.getElementById('message').value;
+
+  // Initialize an array to store error messages
+  var errors = [];
+
+  // Validate the name
+  if (name.length < 2) {
+    errors.push("Name must be at least 2 characters long.");
+  }
+
+  // Validate the email using a simple regex
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    errors.push("Please enter a valid email address.");
+  }
+
+  // Validate the phone number (basic validation for digits only)
+  var phonePattern = /^\d+$/;
+  if (!phonePattern.test(phone)) {
+    errors.push("Phone number must contain digits only.");
+  }
+
+  // Validate the message
+  if (message.length < 10) {
+    errors.push("Message must be at least 10 characters long.");
+  }
+
+  // Display errors or submit the form
+  var errorMessages = document.getElementById('errorMessages');
+  if (errors.length > 0) {
+    errorMessages.innerHTML = errors.join('<br>');
+    return false; // Prevent form submission
+  } else {
+    errorMessages.innerHTML = ''; // Clear previous errors
+    return true; // Allow form submission
+  }
+}
+
+/* Check if a message was sent
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+
+// Function to get URL parameters and their values
+function getURLParameters() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  let params = {};
+
+  urlParams.forEach((value, key) => {
+    params[key] = value;
+  });
+
+  return params;
+}
+
+// Function to display the status message based on the 'message_sent' parameter
+function displayStatusMessage() {
+  const params = getURLParameters();
+  const messageStatusDiv = document.getElementById('messageStatus');
+
+  if (params['message_sent'] === 'false') {
+    messageStatusDiv.textContent = 'An error has occurred and the message was not sent.';
+    messageStatusDiv.classList.add('error');
+  } else if (params['message_sent'] === 'true') {
+    messageStatusDiv.textContent = 'A message was sent successfully. One of our customer reps will reach out to you soon.';
+    messageStatusDiv.classList.add('success');
+  }
+}
+
+// Function to fill in form % TODO %
+
+// Call the function to display the status message
+displayStatusMessage();

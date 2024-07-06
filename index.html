@@ -90,7 +90,7 @@
 							our top-tier VPS plans, designed to deliver exceptional 
 							speed, security, and support at unbeatable prices.</p>
                          <a class="get_bg" href="#" role="button">Get Started</a>
-                         <a class="btn btn-lg btn-dark" href="about.html" role="button">Contact Us</a>
+                         <a class="btn btn-lg btn-dark" href="#contactus" role="button">Contact Us</a>
                     </div>
                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                  <div class="img-box">
@@ -289,6 +289,15 @@
 						</p></a>
     			    </div>
     		    </div>
+    		    <div class="col-sm-4">
+    			    <div class="about_inner">
+    				  	  <div class="icon"><a href="shared.html"><img src="images/icon-1.png"></a></div>
+    				    <h2 class="totaly_text">Web Hosting</h2>
+    				    <p class="making">Unlock seamless and affordable web hosting with our Shared Hosting plans, 
+							perfect for small businesses and freelancers looking to grow their online presence.
+						</p>
+    			    </div>
+    		    </div>
     	    </div>    		
     	</div>
     </div>
@@ -310,27 +319,33 @@
     		<div class="row">
     			<div class="col-md-6">
     				<div class="input_main">
+    						<form method="POST" action="formmail/formmail.php" onsubmit="return validateForm()">
                        <div class="container">
-                          <form action="/action_page.php">
+                       		<div class="form-group">
+								<a name="contactus"></a>
+								<div id="messageStatus"></div>
+    						</div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="Name">
+                              <input type="text" class="email-bt" placeholder="Name" id="name" name="Name">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Email" name="Email">
+                              <input type="text" class="email-bt" placeholder="Email" id="email" name="Email">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone" name="Email">
+                              <input type="text" class="email-bt" placeholder="Phone" id="phone" name="Phone">
                             </div>
                                 <div class="form-group">
-                                  <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
+                                  <textarea class="massage-bt" placeholder="Message" rows="5" id="message" name="Message"></textarea>
                                 </div>
-                            </form>
-                          
-                       </div> 
-                       <div class="send_btn">
-                        <button type="button" class="main_bt"><a href="#">Send</a></button>
-                       </div>                   
-                    </div>
+                            <input type="hidden" name="good_url" value="https://candyvps.com/?message_sent=true#formmail" />
+                            <input type="hidden" name="bad_url" value="https://candyvps.com/?message_sent=false#formmail" />
+                       	</div> 
+                       	<div class="send_btn">
+                        	<button class="main_bt" type="submit">Send</button>
+                       	</div>
+                       	<div id="errorMessages" class="error"></div>
+                    	</form>
+               </div>
     			</div>
     			<div class="col-md-6">
     				<div class="section_right">
@@ -338,7 +353,6 @@
     				</div>
     			</div>
     		</div>
-    	</div>
     </div>
 	<div class="contact_section_3">
     	<div class="container">
@@ -402,8 +416,8 @@
     				<div class="col-sm-12">
     					<div class="menu_text">
     						<ul>
-    						   <li><a href="#"><img src="images/fb-icon.png"></a></li>
-    						   <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+    						   <li><a href="https://www.facebook.com/people/Candy-VPS/61555694461784/"><img src="images/fb-icon.png"></a></li>
+    						   <li><a href="https://x.com/candy_vps"><img src="images/twitter-icon.png"></a></li>
     						   <li><a href="#"><img src="images/in-icon.png"></a></li>
     						   <li><a href="#"><img src="images/google-icon.png"></a></li>
     					    </ul>
@@ -435,6 +449,7 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="/js/form_validation.js"></script>
       <script>
          $(document).ready(function(){
          $(".fancybox").fancybox({

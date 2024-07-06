@@ -782,6 +782,15 @@ button.main_bt a:hover {
     padding: 20px 20px; /* Adjust padding to make button taller */
 }
   
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+}
+
   /* Responsive design */
   @media (max-width: 1200px) {
     .modern-card {

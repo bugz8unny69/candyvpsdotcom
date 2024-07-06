@@ -88,25 +88,27 @@
 							With CandyVPS, you can customize your server to meet your exact needs, ensuring your online presence 
 							is as dynamic and robust as your business. Choose CandyVPS for a seamless, high-performance hosting 
 							experience.</p>
-                         <a class="get_bg" href="#" role="button">Get Started</a>
-                         <a class="btn btn-lg btn-dark" href="about.html" role="button">Contact Us</a>
+                         <a class="get_bg" href="https://cust.iocloudsolutions.net/order.php?step=1&productGroup=5" role="button">Get Started</a>
+                         <a class="btn btn-lg btn-dark" href="#contactus" role="button">Contact Us</a>
                     </div>
                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                  <div class="img-box">
-                    <figure><img src="images/candy_vps-removebg-preview.png" alt="img"/ style="max-width: 100%;"></figure>
+                    <figure><img src="images/candy_vps.png" alt="img"/ style="max-width: 100%;"></figure>
                  </div>
             </div>
            </div>
+           <div class="invisible">
            <div class="emaim-bt">
-           	<div class="col-md-9 margin-0">
-            <div class="input-group mb-3 margin-top-20">
-                <input type="text" class="form-control" placeholder="Enter domain name here">
-            <div class="input-group-append">
-                <button class="search_bt" type="Subscribe"><a href="#">Search</a></button>  
-            </div>
-            </div>           
-        </div>
-       </div>
+           		<div class="col-md-9 margin-0">
+            		<div class="input-group mb-3 margin-top-20">
+                		<input type="text" class="form-control" placeholder="Enter domain name here">
+           					 <div class="input-group-append">
+                				<button class="search_bt" type="Subscribe"><a href="#">Search</a></button>  
+            				 </div>
+            		</div>           
+        		</div>
+       		</div>
+			</div>
      </div>
     </div>
     </section>
@@ -147,7 +149,7 @@
 					</ul>
 					<p class="modern-card-note">The package(s) will be activated within 24 hours, typically within 2 hours.</p>
 				</div>
-				<button class="modern-card-buy-now"><a href="https://cust.iocloudsolutions.net/order.php?step=2&product=6&paymentTerm=1">Buy Now</a></button>
+				<a href="https://cust.iocloudsolutions.net/order.php?step=2&product=6&paymentTerm=1"><button class="modern-card-buy-now">Buy Now</button></a>
 			</div>
 
 			<div class="modern-card">
@@ -167,7 +169,7 @@
 					</ul>
 					<p class="modern-card-note">The package(s) will be activated within 24 hours, typically within 2 hours.</p>
 				</div>
-				<button class="modern-card-buy-now"><a href="https://cust.iocloudsolutions.net/order.php?step=2&product=7&paymentTerm=1">Buy Now</a></button>
+				<a href="https://cust.iocloudsolutions.net/order.php?step=2&product=7&paymentTerm=1"><button class="modern-card-buy-now">Buy Now</button></a>
 			</div>
 			
 			<div class="modern-card">
@@ -187,7 +189,7 @@
 					</ul>
 					<p class="modern-card-note">The package(s) will be activated within 24 hours, typically within 2 hours.</p>
 				</div>
-				<button class="modern-card-buy-now"><a href="https://cust.iocloudsolutions.net/order.php?step=2&product=8&paymentTerm=1">Buy Now</a></button>
+				<a href="https://cust.iocloudsolutions.net/order.php?step=2&product=8&paymentTerm=1"><button class="modern-card-buy-now">Buy Now</button></a>
 			</div>
 			
 			<div class="modern-card">
@@ -207,7 +209,7 @@
 					</ul>
 					<p class="modern-card-note">The package(s) will be activated within 24 hours, typically within 2 hours.</p>
 				</div>
-				<button class="modern-card-buy-now"><a href="https://cust.iocloudsolutions.net/order.php?step=2&product=9&paymentTerm=1">Buy Now</a></button>
+				<a href="https://cust.iocloudsolutions.net/order.php?step=2&product=9&paymentTerm=1"><button class="modern-card-buy-now">Buy Now</button></a>
 			</div>
 			
 			
@@ -274,27 +276,32 @@
     		<div class="row">
     			<div class="col-md-6">
     				<div class="input_main">
+    						<form method="POST" action="formmail/formmail.php" onsubmit="return validateForm()">
                        <div class="container">
-                          <form action="/action_page.php">
+                       		<div class="form-group">
+										<a name="contactus"></a>
+    								</div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="Name">
+                              <input type="text" class="email-bt" placeholder="Name" id="name" name="Name">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Email" name="Email">
+                              <input type="text" class="email-bt" placeholder="Email" id="email" name="Email">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone" name="Email">
+                              <input type="text" class="email-bt" placeholder="Phone" id="phone" name="Phone">
                             </div>
                                 <div class="form-group">
-                                  <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="text"></textarea>
+                                  <textarea class="massage-bt" placeholder="Message" rows="5" id="message" name="Message"></textarea>
                                 </div>
-                            </form>
-                          
-                       </div> 
-                       <div class="send_btn">
-                        <button type="button" class="main_bt"><a href="#">Send</a></button>
-                       </div>                   
-                    </div>
+                            <input type="hidden" name="good_url" value="https://candyvps.com/?message_sent=true#contactus" />
+                            <input type="hidden" name="bad_url" value="https://candyvps.com/?message_sent=false#contactus" />
+                       	</div> 
+                       	<div class="send_btn">
+                        	<button class="main_bt" type="submit">Send</button>
+                       	</div>
+                       	<div id="errorMessages" class="error"></div>
+                    	</form>
+               </div>
     			</div>
     			<div class="col-md-6">
     				<div class="section_right">
@@ -350,7 +357,7 @@
     					<h1 class="useful_text">Products</h1>
     					<div class="menu multi_column_menu">
     					   <ul>
-    						  <li class="footer_menu"><a href="./shared.html"><img src="images/bulit-icon.png" class="footer_menu">Webhosting</a></li>
+    						  <li class="footer_menu"><a href="./shared.html"><img src="images/bulit-icon.png" class="footer_menu">Web Hosting</a></li>
     						  <li class="footer_menu"><a href="./vps.html"><img src="images/bulit-icon.png" class="footer_menu">VPS Hosting</a></li>
     						  <li class="footer_menu"><a href="./dedicated.html"><img src="images/bulit-icon.png" class="footer_menu">Dedicated hosting</a></li>
     					   </ul>
@@ -364,8 +371,8 @@
     				<div class="col-sm-12">
     					<div class="menu_text">
     						<ul>
-    						   <li><a href="#"><img src="images/fb-icon.png"></a></li>
-    						   <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+    						   <li><a href="https://www.facebook.com/people/Candy-VPS/61555694461784/"><img src="images/fb-icon.png"></a></li>
+    						   <li><a href="https://x.com/candy_vps"><img src="images/twitter-icon.png"></a></li>
     						   <li><a href="#"><img src="images/in-icon.png"></a></li>
     						   <li><a href="#"><img src="images/google-icon.png"></a></li>
     					    </ul>
@@ -397,6 +404,7 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="/js/form_validation.js"></script>
       <script>
          $(document).ready(function(){
          $(".fancybox").fancybox({
